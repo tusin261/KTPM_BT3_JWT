@@ -9,7 +9,9 @@ import com.example.jwt_nguyenthanhtu_18045511.until.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -46,5 +48,11 @@ public class AuthController {
         tokenService.createToken(token);
         //System.out.println(token.getToken());
         return token.getToken();
+    }
+
+    @GetMapping("/admin")
+    @PreAuthorize("hasAnyAuthority('ADMIN_CRUD')")
+    public ResponseEntity hello_admin(){
+        return ResponseEntity.ok("Hello ADMIN");
     }
 }
