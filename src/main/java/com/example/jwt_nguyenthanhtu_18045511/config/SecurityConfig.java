@@ -1,4 +1,4 @@
-package com.example.jwt_nguyenthanhtu_18045511.authen;
+package com.example.jwt_nguyenthanhtu_18045511.config;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
