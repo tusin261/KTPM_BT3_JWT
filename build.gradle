@@ -27,7 +27,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.security:spring-security-test'
-    implementation 'com.nimbusds:nimbus-jose-jwt:2.10.1'
+    //implementation 'com.nimbusds:nimbus-jose-jwt:2.10.1'
+    implementation 'com.nimbusds:nimbus-jose-jwt:9.10'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 
